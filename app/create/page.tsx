@@ -11,8 +11,8 @@ export default function CreateEmployee() {
   const router = useRouter()
 
   async function handleSubmit() {
-    await fetch("/api/employee", {
-      method: "POST",
+    await fetch(`${window.location.origin}/api/employee`, {
+              method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, department, manager })
     })
